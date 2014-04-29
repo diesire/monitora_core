@@ -22,7 +22,7 @@ public class Ack {
 	}
 
 	public void setUpdate(Calendar update) {
-		logger.debug("set update to {}", update.getTime().toString());
+		logger.debug("set update on {}", update.getTime().toString());
 		this.update = update;
 	}
 }

@@ -6,6 +6,8 @@ import java.util.Calendar;
 
 import org.junit.Test;
 
+import es.uniovi.miw.monitora.core.api.Ack;
+
 public class AckTest {
 
 	@Test

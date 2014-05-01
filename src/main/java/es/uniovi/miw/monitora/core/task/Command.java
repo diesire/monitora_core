@@ -1,9 +1,9 @@
 package es.uniovi.miw.monitora.core.task;
 
 public interface Command {
-	void run();
+	Object run();
 
-	void setArgs(String args);
+	void setCommandArgs(String commandArgs);
 
-	String getArgs();
+	String getCommandArgs();
 }

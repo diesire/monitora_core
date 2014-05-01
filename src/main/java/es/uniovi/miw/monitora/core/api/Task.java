@@ -7,10 +7,11 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement
 public class Task {
 
-	private Calendar creation;
+	private Calendar creationDate;
 	private String id;
 	private String commandType;
 	private String commandArgs;
+	private String resultType;
 	private String scheduler;
 	private String schedulerArgs;
 
@@ -46,12 +47,12 @@ public class Task {
 		this.schedulerArgs = schedulerArgs;
 	}
 
-	public Calendar getCreation() {
-		return creation;
+	public Calendar getCreationDate() {
+		return creationDate;
 	}
 
-	public void setCreation(Calendar creation) {
-		this.creation = creation;
+	public void setCreationDate(Calendar creationDate) {
+		this.creationDate = creationDate;
 	}
 
 	public String getId() {
@@ -65,9 +66,16 @@ public class Task {
 	@Override
 	public String toString() {
 		return String.format(
-				"Task [creation=%s, id=%s, commandType=%s, scheduler=%s]",
-				creation, id, commandType, scheduler);
+				"Task [creationDate=%s, id=%s, commandType=%s, scheduler=%s]",
+				creationDate.getTime(), id, commandType, scheduler);
 	}
-	
-	
+
+	public String getResultType() {
+		return resultType;
+	}
+
+	public void setResultType(String resultType) {
+		this.resultType = resultType;
+	}
+
 }

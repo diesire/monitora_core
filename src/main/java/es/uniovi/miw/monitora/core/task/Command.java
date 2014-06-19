@@ -1,9 +1,37 @@
 package es.uniovi.miw.monitora.core.task;
 
-public interface Command {
-	Object run();
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-	void setCommandArgs(String commandArgs);
+public class Command {
 
-	String getCommandArgs();
+	private CommandType type;
+	private List<String> args;
+
+	public Command() {
+		args = new ArrayList<String>();
+	}
+
+	public Command(CommandType type, String... args) {
+		this();
+		this.setType(type);
+		this.setArgs(Arrays.asList(args));
+	}
+
+	public List<String> getArgs() {
+		return args;
+	}
+
+	public void setArgs(List<String> args) {
+		this.args = args;
+	}
+
+	public CommandType getType() {
+		return type;
+	}
+
+	public void setType(CommandType type) {
+		this.type = type;
+	}
 }

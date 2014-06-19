@@ -4,32 +4,19 @@ import java.util.Calendar;
 
 import javax.xml.bind.annotation.*;
 
+import es.uniovi.miw.monitora.core.task.Command;
+
 @XmlRootElement
 public class Task {
 
 	private Calendar creationDate;
 	private String id;
-	private String commandType;
-	private String commandArgs;
+	private Command command;
+	private String commandArgs; //XXX
+	private String type; //XXX
 	private String resultType;
 	private String scheduler;
 	private String schedulerArgs;
-
-	public String getCommandType() {
-		return commandType;
-	}
-
-	public void setCommand(String commandType) {
-		this.commandType = commandType;
-	}
-
-	public String getCommandArgs() {
-		return commandArgs;
-	}
-
-	public void setCommandArgs(String commandArgs) {
-		this.commandArgs = commandArgs;
-	}
 
 	public String getScheduler() {
 		return scheduler;
@@ -66,8 +53,8 @@ public class Task {
 	@Override
 	public String toString() {
 		return String.format(
-				"Task [creationDate=%s, id=%s, commandType=%s, scheduler=%s]",
-				creationDate.getTime(), id, commandType, scheduler);
+				"Task [creationDate=%s, id=%s, command=%s, scheduler=%s]",
+				creationDate.getTime(), id, command, scheduler);
 	}
 
 	public String getResultType() {
@@ -76,6 +63,30 @@ public class Task {
 
 	public void setResultType(String resultType) {
 		this.resultType = resultType;
+	}
+
+	public Command getCommand() {
+		return command;
+	}
+
+	public void setCommand(Command command) {
+		this.command = command;
+	}
+
+	public String getCommandArgs() {
+		return commandArgs;
+	}
+
+	public void setCommandArgs(String commandArgs) {
+		this.commandArgs = commandArgs;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }

@@ -1,11 +1,8 @@
-package es.uniovi.miw.monitora.core.model;
+package es.uniovi.miw.monitora.core.api;
 
 import java.util.Calendar;
 
 import javax.xml.bind.annotation.XmlRootElement;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Entity class. Xml notation allow un/marshalling
@@ -13,7 +10,6 @@ import org.slf4j.LoggerFactory;
  */
 @XmlRootElement
 public class Ack {
-	static private Logger logger = LoggerFactory.getLogger(Ack.class);
 	
 	private Calendar update;
 
@@ -22,7 +18,6 @@ public class Ack {
 	}
 
 	public void setUpdate(Calendar update) {
-		logger.debug("set update: {0}", update);
 		this.update = update;
 	}
 }

@@ -1,6 +1,6 @@
-# monitora_core
+# MonitORA core
 
-Utility module for  [monitora](https://github.com/diesire/monitora)
+Utility module (former core module) for  [MonitORA](https://github.com/diesire/monitora)
 
 ## Requisites
  
